@@ -21,7 +21,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
-  const projects: Project[] = [
+  const clientProjects: Project[] = [
     {
       title: "Swiftly Workspace",
       description: "A comprehensive business management and ERP system for macOS and iOS. Handles sales, project management, and financials.",
@@ -136,6 +136,36 @@ Technical Structure:
     }
   ];
 
+  const personalProjects: Project[] = [
+    {
+      title: "StoicLife",
+      description: "A personal digital sanctuary for practicing Stoic philosophy. Integrate ancient wisdom into modern life.",
+      longDescription: `StoicLife is a personal digital sanctuary for practicing Stoic philosophy. It's designed to help you integrate ancient wisdom into your modern life through three core pillars:
+
+1. Daily Wisdom (The "Today" Tab)
+• Curated Quotes: The app fetches quotes from authors like Marcus Aurelius, Epictetus, and Seneca.
+• Interactive Quote Cards: Swipe through quotes, favorite them, or share them as images.
+• Progressive Loading: Features a modern "Skeleton Screen" to provide a smooth experience while fetching data.
+
+2. Stoic Journaling (The "Reflections" Tab)
+• Deep Reflection: Journal your thoughts on specific quotes with multimedia support.
+• Multimedia Journaling: Attach images, audio recordings, and videos to your reflections.
+• Contextual Awareness: Save the location of your thoughts to create a geographic map of your journey.
+
+3. Native Integration & Premium Features
+• Home Screen Widgets: See daily quotes directly on your home screen.
+• Spotlight Search: Search for quotes globally on your iPhone using system-wide Spotlight search.
+• TipKit Support: Proactive tips guide you on how to get the most out of the app.
+• Premium Model: Includes a paywall for "power users," offering unlimited favorites and reflections.`,
+      tags: ["SwiftUI", "TipKit", "Widgets", "Spotlight"],
+      image: "/projects/stoiclife_1.png",
+      images: [
+        "/projects/stoiclife_1.png", "/projects/stoiclife_2.png", "/projects/stoiclife_3.png", "/projects/stoiclife_4.png", "/projects/stoiclife_5.png", "/projects/stoiclife_6.png", "/projects/stoiclife_7.png", "/projects/stoiclife_8.png", "/projects/stoiclife_9.png"
+      ],
+      mockupColor: "#E0F2FE"
+    }
+  ];
+
   return (
     <main className={styles.main}>
       
@@ -147,7 +177,23 @@ Technical Structure:
           <p className={styles.sectionSubtitle}>A collection of applications built with precision and care.</p>
         </div>
         <div className={styles.grid}>
-          {projects.map((project) => (
+          {clientProjects.map((project) => (
+            <ProjectCard 
+              key={project.title} 
+              {...project} 
+              onViewDetails={() => setSelectedProject(project)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="personal" className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Personal Projects</h2>
+          <p className={styles.sectionSubtitle}>Experimental builds and personal passion projects.</p>
+        </div>
+        <div className={styles.grid}>
+          {personalProjects.map((project) => (
             <ProjectCard 
               key={project.title} 
               {...project} 

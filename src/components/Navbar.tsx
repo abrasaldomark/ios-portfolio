@@ -8,7 +8,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('top');
 
   useEffect(() => {
-    const sections = ['top', 'projects', 'skills', 'contact'];
+    const sections = ['top', 'projects', 'personal', 'skills', 'contact'];
     
     const observerOptions = {
       root: null,
@@ -43,7 +43,13 @@ export default function Navbar() {
             href="#projects" 
             className={activeSection === 'projects' ? styles.active : ''}
           >
-            Projects
+            Client
+          </Link>
+          <Link 
+            href="#personal" 
+            className={activeSection === 'personal' ? styles.active : ''}
+          >
+            Personal
           </Link>
           <Link 
             href="#skills" 
