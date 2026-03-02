@@ -69,16 +69,18 @@
   background: transparent;
 }
 
-.links a:hover {
-  background: rgba(var(--foreground-rgb), 0.05);
+.links a:hover,
+.links a.active,
+.logo.active a {
+  background: rgba(var(--foreground-rgb), 0.08);
   color: rgb(var(--system-blue-rgb));
-  transform: translateY(-1px);
+  opacity: 1;
 }
 
-/* Active State Simulation */
+/* Active State Simulation (Tap) */
 .links a:active {
   transform: scale(0.95);
-  background: rgba(var(--foreground-rgb), 0.1);
+  background: rgba(var(--foreground-rgb), 0.15);
 }
 
 @media (max-width: 480px) {
