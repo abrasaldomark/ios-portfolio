@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">Mark Abrasaldo</Link>
+          <Link href="#top">Mark Abrasaldo</Link>
         </div>
         <div className={styles.links}>
           <Link href="#projects">Projects</Link>

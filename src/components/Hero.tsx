@@ -6,7 +6,7 @@ interface HeroProps {
 
 export default function Hero({ onContactClick }: HeroProps) {
   return (
-    <section className={styles.hero}>
+    <section id="top" className={styles.hero}>
       <div className={styles.content}>
         <h1 className={styles.title}>Mark Abrasaldo. <br />Senior iOS Engineer.</h1>
         <p className={styles.subtitle}>
