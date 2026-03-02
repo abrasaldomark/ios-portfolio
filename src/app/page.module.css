@@ -112,6 +112,8 @@
   transition: transform 0.2s ease;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .resumeContainer {

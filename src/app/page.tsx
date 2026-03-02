@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectModal from '@/components/ProjectModal';
-import ContactModal from '@/components/ContactModal';
 import styles from './page.module.css';
 
 interface Project {
@@ -19,7 +18,6 @@ interface Project {
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isContactOpen, setIsContactOpen] = useState(false);
 
   const clientProjects: Project[] = [
     {
@@ -187,7 +185,7 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
   return (
     <main className={styles.main}>
       
-      <Hero onContactClick={() => setIsContactOpen(true)} />
+      <Hero />
 
       <section id="projects" className={styles.section}>
         <div className={styles.sectionHeader}>
@@ -227,11 +225,6 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
         project={selectedProject} 
       />
 
-      <ContactModal 
-        isOpen={isContactOpen} 
-        onClose={() => setIsContactOpen(false)} 
-      />
-
       <section id="skills" className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Technical Stack</h2>
@@ -255,14 +248,14 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
         <div className={styles.contactCard}>
           <h2 className={styles.sectionTitle}>Let&apos;s build something together.</h2>
           <p className={styles.sectionSubtitle}>Currently open to new opportunities and interesting projects.</p>
-          <div className={styles.emailDisplay}>abrasaldomark@gmail.com</div>
+          <div className={styles.emailDisplay}>abrasaldomark@icloud.com</div>
           <div className={styles.contactLinks}>
-            <button 
+            <a 
+              href="mailto:abrasaldomark@icloud.com"
               className={styles.contactButton}
-              onClick={() => setIsContactOpen(true)}
             >
               Email Me
-            </button>
+            </a>
             <div className={styles.socials}>
               <a href="https://github.com/abrasaldomark" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/abrasaldomark/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

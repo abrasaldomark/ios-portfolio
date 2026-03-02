@@ -1,10 +1,6 @@
 import styles from './Hero.module.css';
 
-interface HeroProps {
-  onContactClick: () => void;
-}
-
-export default function Hero({ onContactClick }: HeroProps) {
+export default function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.content}>
@@ -14,7 +10,7 @@ export default function Hero({ onContactClick }: HeroProps) {
         </p>
         <div className={styles.cta}>
           <a href="#projects" className={styles.button}>View Projects</a>
-          <button onClick={onContactClick} className={styles.buttonSecondary}>Get in Touch</button>
+          <a href="mailto:abrasaldomark@icloud.com" className={styles.buttonSecondary}>Get in Touch</a>
         </div>
       </div>
     </section>
