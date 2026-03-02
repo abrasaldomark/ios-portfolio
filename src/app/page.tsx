@@ -156,8 +156,26 @@ Technical Structure:
 • Home Screen Widgets: See daily quotes directly on your home screen.
 • Spotlight Search: Search for quotes globally on your iPhone using system-wide Spotlight search.
 • TipKit Support: Proactive tips guide you on how to get the most out of the app.
-• Premium Model: Includes a paywall for "power users," offering unlimited favorites and reflections.`,
-      tags: ["SwiftUI", "TipKit", "Widgets", "Spotlight"],
+• Premium Model: Includes a paywall for "power users," offering unlimited favorites and reflections.
+
+4. Cloud-Powered Wisdom (Firebase)
+• Dynamic Content: The app uses Firebase Firestore as its central repository for Stoic wisdom. This allows you to add or update quotes remotely without requiring an app store update.
+• Global Search & Fetching: When you first open the app, it pulls the latest curated quotes from the Firestore quotes collection.
+• Infrastructure: The project includes custom Node.js scripts (upload-quotes.js) to manage and push massive libraries of quotes into the Firebase backend.
+
+5. Modern Local Persistence (SwiftData)
+• High-Performance Cache: Every quote fetched from Firebase is automatically persisted into SwiftData. This ensures the app is fully functional offline—your daily wisdom is always available, even without a connection.
+• Complex Journaling: Your personal reflections, including their relationships to specific quotes and multimedia (audio/video/images), are managed by SwiftData's advanced @Relationship engine.
+• Deep System Integration: Because it uses SwiftData, the app integrates deeply with Spotlight Search and iOS Widgets, allowing you to search your favorite quotes and reflections directly from the home screen.
+
+6. Additional Key Features
+• The "Today" Tab: A beautiful, swiping interface that fetches daily quotes from Firebase and caches them via SwiftData.
+• Multimedia Stoic Journal: A sophisticated journaling system where you can record audio, video, and photos alongside your thoughts, all saved securely in your local SwiftData store.
+• Proactive Discovery: Uses TipKit to teach you how to use Spotlight search and Widgets, ensuring you stay connected to Stoic practice throughout your day.
+• Smart Navigation (MVVM-C): A robust architecture that keeps your Firebase networking and SwiftData persistence logic clean and separated from your UI.
+
+In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content delivery and SwiftData for a fast, offline-capable, and media-rich personal experience.`,
+      tags: ["SwiftUI", "TipKit", "Widgets", "Spotlight", "Firebase", "SwiftData", "MVVM-C"],
       image: "/projects/stoiclife_1.png",
       images: [
         "/projects/stoiclife_1.png", "/projects/stoiclife_2.png", "/projects/stoiclife_3.png", "/projects/stoiclife_4.png", "/projects/stoiclife_5.png", "/projects/stoiclife_6.png", "/projects/stoiclife_7.png", "/projects/stoiclife_8.png", "/projects/stoiclife_9.png"
