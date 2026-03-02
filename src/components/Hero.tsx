@@ -8,7 +8,7 @@ export default function Hero({ onContactClick }: HeroProps) {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Mark Abrasaldo. <br />Senior iOS Engineer.</h1>
+        <h1 className={styles.title}>Mark Abrasaldo <br />Senior iOS Engineer</h1>
         <p className={styles.subtitle}>
           Specializing in SwiftUI, complex system architecture, and delivering polished experiences on the App Store.
         </p>
