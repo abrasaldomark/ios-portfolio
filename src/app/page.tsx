@@ -200,8 +200,8 @@ Technical Structure:
               Email Me
             </button>
             <div className={styles.socials}>
-              <a href="#">GitHub</a>
-              <a href="#">LinkedIn</a>
+              <a href="https://github.com/abrasaldomark" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/abrasaldomark/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="#">Twitter</a>
             </div>
           </div>
