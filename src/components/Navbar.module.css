@@ -48,10 +48,21 @@
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: -0.02em;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo a {
   color: rgb(var(--foreground-rgb));
+}
+
+.logo.active {
+  background: rgba(var(--foreground-rgb), 0.08);
+}
+
+.logo.active a {
+  color: rgb(var(--system-blue-rgb));
 }
 
 .links {
@@ -71,8 +82,15 @@
 
 .links a:hover,
 .links a.active,
-.logo.active a {
+.logo:hover,
+.logo.active {
   background: rgba(var(--foreground-rgb), 0.08);
+}
+
+.links a:hover,
+.links a.active,
+.logo:hover a,
+.logo.active a {
   color: rgb(var(--system-blue-rgb));
   opacity: 1;
 }
