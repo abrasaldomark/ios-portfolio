@@ -174,4 +174,14 @@
     border-radius: 30px;
     padding: 3rem 1.5rem;
   }
+
+  .skillCategory {
+    align-items: center;
+    text-align: center;
+  }
+
+  .skillLabel {
+    width: 100%;
+    max-width: 250px;
+  }
 }

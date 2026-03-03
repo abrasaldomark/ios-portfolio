@@ -16,7 +16,7 @@ export default function Hero() {
             domain="icloud.com" 
             className={styles.buttonSecondary}
           >
-            Get in Touch
+            Contact
           </ObfuscatedEmail>
         </div>
       </div>

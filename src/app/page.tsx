@@ -250,7 +250,9 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
           <h2 className={styles.sectionTitle}>Let&apos;s build something together.</h2>
           <p className={styles.sectionSubtitle}>Currently open to new opportunities and interesting projects.</p>
           <div className={styles.emailDisplay}>
-            <ObfuscatedEmail user="abrasaldomark" domain="icloud.com" />
+            <ObfuscatedEmail user="abrasaldomark" domain="icloud.com">
+              abrasaldomark@icloud.com
+            </ObfuscatedEmail>
           </div>
           <div className={styles.contactLinks}>
             <ObfuscatedEmail 

@@ -23,6 +23,27 @@
   position: relative;
   box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
   animation: slideUp 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+  padding-bottom: 2rem;
+  
+  /* High-Contrast Scrollbar Styling */
+  scrollbar-width: thin;
+  scrollbar-color: #8e8e93 rgba(var(--foreground-rgb), 0.05);
+}
+
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(var(--foreground-rgb), 0.05);
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #8e8e93;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 @keyframes slideUp {
@@ -31,37 +52,66 @@
 }
 
 .closeButton {
-  position: absolute;
+  position: sticky;
   top: 1rem;
-  right: 1.5rem;
+  float: right;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
   font-size: 2rem;
-  background: none;
-  border: none;
+  background: rgba(var(--card-background-rgb), 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(var(--foreground-rgb), 0.1);
   color: rgb(var(--system-gray-rgb));
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.closeButton:hover {
+  background-color: rgb(var(--system-gray-6-rgb));
+  transform: scale(1.05);
 }
 
 .gallery {
   display: flex;
   overflow-x: auto;
-  gap: 1rem;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem 2rem 1.5rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  clear: both;
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 1.5rem;
+  }
 }
 
 .gallery::-webkit-scrollbar {
-  height: 6px;
+  height: 10px;
 }
 
 .gallery::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(var(--foreground-rgb), 0.05);
+  border-radius: 10px;
 }
 
 .gallery::-webkit-scrollbar-thumb {
-  background: rgb(var(--system-gray-4-rgb));
+  background: #8e8e93;
   border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .imageContainer {
@@ -75,6 +125,15 @@
   scroll-snap-align: start;
   cursor: zoom-in;
   transition: transform 0.2s;
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    width: calc(100vw - 3rem);
+    height: calc((100vw - 3rem) * 1.8);
+    max-height: 500px;
+    scroll-snap-align: center;
+  }
 }
 
 .imageContainer:hover {
@@ -178,5 +237,21 @@
   .modal {
     border-radius: 30px;
     max-height: 85vh;
+  }
+
+  .gallery {
+    padding: 1rem 5rem 2rem 5rem;
+    gap: 3rem;
+  }
+
+  .imageContainer {
+    width: 280px;
+    height: 560px;
+    scroll-snap-align: center;
+  }
+
+  .closeButton {
+    top: 1.5rem;
+    margin-right: 2rem;
   }
 }
