@@ -291,6 +291,6 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
 const skills = [
   { category: "Programming Language", items: ["Swift", "Objective-C"] },
   { category: "Frameworks", items: ["SwiftUI", "UIKit", "Combine", "RxSwift", "Redux (ReSwift)"] },
-  { category: "Data & Networking", items: ["Core Data", "CloudKit", "Firebase", "Alamofire", "GraphQL"] },
+  { category: "Data & Networking", items: ["Core Data", "SwiftData", "CloudKit", "Firebase", "Alamofire", "REST"] },
   { category: "Tools & DevOps", items: ["Xcode", "Git", "Fastlane", "CI/CD", "JIRA"] }
 ];

@@ -87,6 +87,11 @@
   opacity: 0.9;
 }
 
+.emailDisplay a {
+  color: white;
+  text-decoration: none;
+}
+
 .contactLinks {
   display: flex;
   flex-direction: column;
