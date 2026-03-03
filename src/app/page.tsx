@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
 import ProjectModal from '@/components/ProjectModal';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import styles from './page.module.css';
 
 interface Project {
@@ -248,14 +249,17 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
         <div className={styles.contactCard}>
           <h2 className={styles.sectionTitle}>Let&apos;s build something together.</h2>
           <p className={styles.sectionSubtitle}>Currently open to new opportunities and interesting projects.</p>
-          <div className={styles.emailDisplay}>abrasaldomark@icloud.com</div>
+          <div className={styles.emailDisplay}>
+            <ObfuscatedEmail user="abrasaldomark" domain="icloud.com" />
+          </div>
           <div className={styles.contactLinks}>
-            <a 
-              href="mailto:abrasaldomark@icloud.com"
+            <ObfuscatedEmail 
+              user="abrasaldomark" 
+              domain="icloud.com" 
               className={styles.contactButton}
             >
               Email Me
-            </a>
+            </ObfuscatedEmail>
             <div className={styles.socials}>
               <a href="https://github.com/abrasaldomark" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/abrasaldomark/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

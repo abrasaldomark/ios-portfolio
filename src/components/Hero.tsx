@@ -1,3 +1,4 @@
+import ObfuscatedEmail from './ObfuscatedEmail';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -10,7 +11,13 @@ export default function Hero() {
         </p>
         <div className={styles.cta}>
           <a href="#projects" className={styles.button}>View Projects</a>
-          <a href="mailto:abrasaldomark@icloud.com" className={styles.buttonSecondary}>Get in Touch</a>
+          <ObfuscatedEmail 
+            user="abrasaldomark" 
+            domain="icloud.com" 
+            className={styles.buttonSecondary}
+          >
+            Get in Touch
+          </ObfuscatedEmail>
         </div>
       </div>
     </section>
