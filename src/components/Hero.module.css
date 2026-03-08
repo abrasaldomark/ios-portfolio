@@ -72,6 +72,11 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 8rem;
+    min-height: auto;
+  }
+  
   .cta {
     flex-direction: column;
     align-items: center;

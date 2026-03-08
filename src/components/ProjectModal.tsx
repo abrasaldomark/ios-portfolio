@@ -42,6 +42,13 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           <button className={styles.closeButton} onClick={onClose}>×</button>
           
+          <div className={styles.header}>
+            <h2 className={styles.title}>{project.title}</h2>
+            <div className={styles.tags}>
+              {project.tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>)}
+            </div>
+          </div>
+
           <div className={styles.gallery}>
             {project.images.map((img, index) => (
               <div 
@@ -56,10 +63,6 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
           </div>
 
           <div className={styles.content}>
-            <h2 className={styles.title}>{project.title}</h2>
-            <div className={styles.tags}>
-              {project.tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>)}
-            </div>
             <div className={styles.longDescription}>
               {project.longDescription.split('\n').map((line, i) => (
                 <p key={i} className={line.trim() === '' ? styles.spacer : ''}>{line}</p>
