@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Mark Abrasaldo <br />Senior iOS Engineer</h1>
+        <h1 className={styles.title}>Mark Abrasaldo <br />Mobile App Developer</h1>
         <p className={styles.subtitle}>
-          Specializing in SwiftUI, complex system architecture, and delivering polished experiences on the App Store.
+          Specializing in Swift, SwiftUI, UIKit, Kotlin, Java, Jetpack Compose, complex system architecture, and delivering polished experiences on the App Store and Google Play.
         </p>
         <div className={styles.cta}>
           <a href="#projects" className={styles.button}>View Projects</a>

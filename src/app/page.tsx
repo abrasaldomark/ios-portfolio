@@ -296,15 +296,15 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
       </section>
 
       <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} Mark Abrasaldo. Built with Next.js and Swift-like precision.</p>
+        <p>© {new Date().getFullYear()} Mark Abrasaldo. Built with Next.js and native precision.</p>
       </footer>
     </main>
   );
 }
 
 const skills = [
-  { category: "Programming Language", items: ["Swift", "Objective-C"] },
-  { category: "Frameworks", items: ["SwiftUI", "UIKit", "Combine", "RxSwift", "Redux (ReSwift)"] },
+  { category: "Programming Language", items: ["Swift", "Kotlin", "Java", "Objective-C"] },
+  { category: "Frameworks", items: ["SwiftUI", "Jetpack Compose", "UIKit", "Combine", "RxSwift", "Redux (ReSwift)"] },
   { category: "Data & Networking", items: ["Core Data", "SwiftData", "CloudKit", "Firebase", "Alamofire", "REST"] },
-  { category: "Tools & DevOps", items: ["Xcode", "Git", "Fastlane", "CI/CD", "JIRA"] }
+  { category: "Tools & DevOps", items: ["Xcode", "Android Studio", "Git", "Fastlane", "CI/CD", "JIRA"] }
 ];

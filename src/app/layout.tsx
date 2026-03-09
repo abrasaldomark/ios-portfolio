@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mark Abrasaldo | Senior iOS Engineer",
-  description: "Portfolio of Mark Abrasaldo, a Senior iOS Engineer specializing in SwiftUI, System Architecture, and App Store delivery.",
+  title: "Mark Abrasaldo | Mobile App Developer",
+  description: "Portfolio of Mark Abrasaldo, a Mobile App Developer specializing in iOS (Swift, SwiftUI, UIKit) and Android (Kotlin, Java, Jetpack Compose), System Architecture, and App Store/Google Play delivery.",
 };
 
 export default function RootLayout({
