@@ -13,7 +13,7 @@ export default function Hero() {
           <a href="#projects" className={styles.button}>View Projects</a>
           <ObfuscatedEmail 
             user="abrasaldomark" 
-            domain="icloud.com" 
+            domain="gmail.com" 
             className={styles.buttonSecondary}
           >
             Contact

@@ -33,11 +33,11 @@ Core Functionality:
 • Time & Resource Tracking: Includes timesheets and activity logging to monitor billable hours.
 
 Technical Highlights:
-• Multi-Platform: A single codebase serving both macOS and iOS with platform-specific optimizations.
+• Multi-Platform: A cross-platform CRM application for iOS, iPadOS, and macOS with platform-specific optimizations.
+• Unit Testing: Wrote unit tests to validate business logic, improve reliability, and maintain code quality.
 • Cloud Synchronization: Uses NSPersistentCloudKitContainer for seamless data sync across devices.
-• AI Integration: Integrates with OpenAI for enhanced business workflows.
-• Architecture: Strict MVVM architecture with business logic in Core Data model extensions.`,
-      tags: ["SwiftUI", "Core Data", "CloudKit", "OpenAI"],
+• Architecture: Built the UI using SwiftUI with a scalable MVVM architecture and persistent data storage using Core Data.`,
+      tags: ["SwiftUI", "Core Data", "CloudKit", "Unit Testing"],
       image: "/projects/Swiftly iOS 01.PNG",
       images: [
         "/projects/Swiftly iOS 01.PNG", "/projects/Swiftly iOS 02.PNG", "/projects/Swiftly iOS 03.PNG", "/projects/Swiftly iOS 04.PNG", "/projects/Swiftly iOS 05.PNG",
@@ -52,16 +52,16 @@ Technical Highlights:
       longDescription: `Marine Rescue NSW app is a vital safety tool designed for recreational boaters in New South Wales, Australia. Its primary mission is to help boaters stay safe on the water by providing a direct link to Marine Rescue NSW services.
 
 Core Purpose:
-The app acts as a "trip monitor." When a boater "Logs On" (starts a trip), Marine Rescue NSW tracks their expected return time. If the boater fails to "Log Off" by that time, the system alerts Marine Rescue to initiate a welfare check or search and rescue operation.
+The app acts as a "trip monitor" and mission-critical iOS safety application. When a boater "Logs On" (starts a trip), Marine Rescue NSW tracks their expected return time and provides live GPS tracking and automated welfare alerts.
 
 Key Features:
 • Trip Logging: Easily register your departure time, destination, and expected return.
 • Live Tracking: Uses your phone's GPS to provide position updates during your trip.
 • Vessel Profiles: Store details about your boat to help rescuers identify you quickly.
-• Maritime Weather: Real-time weather warnings, tide information, and sea conditions.
+• Maritime Weather: Real-time weather warnings, tide information, and sea condition data using WillyWeather APIs.
 
 Technical Foundation:
-Built with a robust architecture using Redux (ReSwift) for state management and RxSwift for reactive features, ensuring reliability in challenging maritime environments.`,
+Built with a robust architecture using Redux (ReSwift) for state management and RxSwift for reactive features, ensuring reliability in challenging maritime environments and low-bandwidth constraints.`,
       tags: ["Swift", "Redux (ReSwift)", "RxSwift", "Core Location"],
       image: "/projects/MRNSW iOS 01.jpeg",
       images: [
@@ -83,8 +83,9 @@ Key Features:
 
 Technical Overview:
 • Platform: iOS (Objective-C) using a Tab Bar navigation structure.
-• Integrations: Uses Firebase for push notifications and crash reporting, and AFNetworking for data communication.`,
-      tags: ["Objective-C", "Firebase", "Beacons", "AFNetworking"],
+• Hybrid Experience: Maintained and enhanced hybrid iOS apps using Swift, Objective-C, UIKit, MVC, and WebView.
+• Analytics & Push: Integrated Firebase for push notifications and added Firebase Analytics to track user behavior and app performance.`,
+      tags: ["Objective-C", "Firebase", "Beacons", "WebView"],
       image: "/projects/Tokyo Yakult Swallows Official 01.jpeg",
       images: [
         "/projects/Tokyo Yakult Swallows Official 01.jpeg", "/projects/Tokyo Yakult Swallows Official 02.jpeg", "/projects/Tokyo Yakult Swallows Official 03.jpeg", "/projects/Tokyo Yakult Swallows Official 04.jpeg"
@@ -98,14 +99,14 @@ Technical Overview:
 
 Key Functional Areas:
 • Scanning & Inspection: Drivers scan product barcodes (JAN codes) to verify items during loading and delivery.
-• Real-Time Location Tracking: Tracks GPS coordinates in the background to monitor delivery progress.
+• Real-Time Location Tracking: Tracks GPS coordinates in the background to monitor delivery progress using Google Maps SDK.
 • Digital Signature Capture: Native signature pad collects customer signatures as proof of delivery.
 • Hybrid Integration: Uses custom URL schemes so the web interface can trigger native features like camera and signatures.
 
 Technical Overview:
 • Architecture: Hybrid (WKWebView + Native controllers).
-• Key Libraries: Alamofire, Firebase, and SignaturePad.`,
-      tags: ["Swift", "Hybrid/WKWebView", "Firebase", "Alamofire"],
+• Key Libraries: Integrated Google Maps SDK for location-based features and Firebase Cloud Messaging for push notifications.`,
+      tags: ["Swift", "Hybrid/WKWebView", "Firebase", "Google Maps"],
       image: "/projects/Edion 01.jpeg",
       images: [
         "/projects/Edion 01.jpeg", "/projects/Edion 02.jpeg", "/projects/Edion 03.jpeg", "/projects/Edion 04.jpeg", "/projects/Edion 05.jpeg"
@@ -125,8 +126,8 @@ Key Features:
 
 Technical Structure:
 • Architecture: Hybrid (Swift + WKWebView) with native navigation and background tracking.
-• Cloud Integration: Firebase for analytics and push notifications.`,
-      tags: ["Swift", "Hybrid/WKWebView", "Core Location", "Maps"],
+• Cloud Integration: Integrated Firebase for analytics and added Firebase Cloud Messaging for push notifications.`,
+      tags: ["Swift", "Hybrid/WKWebView", "Core Location", "Firebase"],
       image: "/projects/Memolead 01.jpeg",
       images: [
         "/projects/Memolead 01.jpeg", "/projects/Memolead 02.jpeg", "/projects/Memolead 03.jpeg", "/projects/Memolead 04.jpeg"
@@ -250,14 +251,14 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
           <h2 className={styles.sectionTitle}>Let&apos;s build something together.</h2>
           <p className={styles.sectionSubtitle}>Currently open to new opportunities and interesting projects.</p>
           <div className={styles.emailDisplay}>
-            <ObfuscatedEmail user="abrasaldomark" domain="icloud.com">
-              abrasaldomark@icloud.com
+            <ObfuscatedEmail user="abrasaldomark" domain="gmail.com">
+              abrasaldomark@gmail.com
             </ObfuscatedEmail>
           </div>
           <div className={styles.contactLinks}>
             <ObfuscatedEmail 
               user="abrasaldomark" 
-              domain="icloud.com" 
+              domain="gmail.com" 
               className={styles.contactButton}
             >
               Email Me
@@ -303,8 +304,8 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
 }
 
 const skills = [
-  { category: "Programming Language", items: ["Swift", "Kotlin", "Java", "Objective-C"] },
-  { category: "Frameworks", items: ["SwiftUI", "Jetpack Compose", "UIKit", "Combine", "RxSwift", "Redux (ReSwift)"] },
-  { category: "Data & Networking", items: ["Core Data", "SwiftData", "CloudKit", "Firebase", "Alamofire", "REST"] },
-  { category: "Tools & DevOps", items: ["Xcode", "Android Studio", "Git", "Fastlane", "CI/CD", "JIRA"] }
+  { category: "Programming Language", items: ["Swift", "Objective-C", "Kotlin", "Java", "Python"] },
+  { category: "Frameworks", items: ["SwiftUI", "UIKit", "Jetpack Compose", "JavaFX", "MVC/MVVM", "Redux (ReSwift)", "RxSwift"] },
+  { category: "Data & Networking", items: ["Core Data", "CloudKit", "REST APIs", "MapKit", "Google APIs (Maps, Firebase, Analytics, FCM)"] },
+  { category: "Tools & Testing", items: ["Git", "Unit Testing", "Xcode", "Android Studio"] }
 ];
