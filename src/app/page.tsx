@@ -22,6 +22,30 @@ export default function Home() {
 
   const clientProjects: Project[] = [
     {
+      title: "Marine Rescue NSW",
+      description: "Vital safety app for boaters in NSW. Features real-time trip tracking, weather alerts, and emergency services integration.",
+      longDescription: `Marine Rescue NSW app is a vital safety tool designed for recreational boaters in New South Wales, Australia. Its primary mission is to help boaters stay safe on the water by providing a direct link to Marine Rescue NSW services.
+
+Core Purpose:
+The app acts as a "trip monitor" and mission-critical iOS safety application. When a boater "Logs On" (starts a trip), Marine Rescue NSW tracks their expected return time and provides live GPS tracking and automated welfare alerts.
+
+Key Features:
+• Trip Logging: Easily register your departure time, destination, and expected return.
+• Live Tracking: Uses your phone's GPS to provide position updates during your trip.
+• Vessel Profiles: Store details about your boat to help rescuers identify you quickly.
+• Maritime Weather: Real-time weather warnings, tide information, and sea condition data using WillyWeather APIs.
+
+Technical Foundation:
+Built with a robust architecture using Redux (ReSwift) for state management and RxSwift for reactive features, ensuring reliability in challenging maritime environments and low-bandwidth constraints.`,
+      tags: ["Swift", "Redux (ReSwift)", "RxSwift", "Core Location"],
+      image: "/projects/MRNSW iOS 01.jpeg",
+      images: [
+        "/projects/MRNSW iOS 01.jpeg", "/projects/MRNSW iOS 02.jpeg", "/projects/MRNSW iOS 03.jpeg", "/projects/MRNSW iOS 04.jpeg", "/projects/MRNSW iOS 05.jpeg", "/projects/MRNSW iOS 06.jpeg", "/projects/MRNSW iOS 07.jpeg", "/projects/MRNSW iOS 08.jpeg",
+        "/projects/MRNSW iPadOS 01.jpeg", "/projects/MRNSW iPadOS 02.jpeg", "/projects/MRNSW iPadOS 03.jpeg", "/projects/MRNSW iPadOS 04.jpeg", "/projects/MRNSW iPadOS 05.jpeg", "/projects/MRNSW iPadOS 06.jpeg", "/projects/MRNSW iPadOS 07.jpeg"
+      ],
+      mockupColor: "#E02B1D"
+    },
+    {
       title: "Swiftly Workspace",
       description: "A comprehensive business management and ERP system for macOS and iOS. Handles sales, project management, and financials.",
       longDescription: `Workspace is a multi-platform business management and ERP (Enterprise Resource Planning) system built with SwiftUI for macOS and iOS. It is designed to handle the end-to-end operations of a business, from initial sales and customer management to project execution, time tracking, and final invoicing.
@@ -47,28 +71,25 @@ Technical Highlights:
       mockupColor: "#007AFF"
     },
     {
-      title: "Marine Rescue NSW",
-      description: "Vital safety app for boaters in NSW. Features real-time trip tracking, weather alerts, and emergency services integration.",
-      longDescription: `Marine Rescue NSW app is a vital safety tool designed for recreational boaters in New South Wales, Australia. Its primary mission is to help boaters stay safe on the water by providing a direct link to Marine Rescue NSW services.
-
-Core Purpose:
-The app acts as a "trip monitor" and mission-critical iOS safety application. When a boater "Logs On" (starts a trip), Marine Rescue NSW tracks their expected return time and provides live GPS tracking and automated welfare alerts.
+      title: "Memolead",
+      description: "A lifestyle service portal for managing memberships. Integrates facility search and QR code check-ins.",
+      longDescription: `Memolead is a Japanese hybrid iOS application designed for members of the Memolead Group, specializing in wedding ceremonies, funeral services, and mutual aid societies.
 
 Key Features:
-• Trip Logging: Easily register your departure time, destination, and expected return.
-• Live Tracking: Uses your phone's GPS to provide position updates during your trip.
-• Vessel Profiles: Store details about your boat to help rescuers identify you quickly.
-• Maritime Weather: Real-time weather warnings, tide information, and sea condition data using WillyWeather APIs.
+• Membership Management: Personal dashboard to view status, points, and contracts.
+• Location-Based Services: GPS-enabled search for facilities and affiliate stores.
+• QR Code Integration: Built-in scanner for check-ins and point collection.
+• Information Hub: Access to etiquette guides, news, and specialized service websites.
 
-Technical Foundation:
-Built with a robust architecture using Redux (ReSwift) for state management and RxSwift for reactive features, ensuring reliability in challenging maritime environments and low-bandwidth constraints.`,
-      tags: ["Swift", "Redux (ReSwift)", "RxSwift", "Core Location"],
-      image: "/projects/MRNSW iOS 01.jpeg",
+Technical Structure:
+• Architecture: Hybrid (Swift + WKWebView) with native navigation and background tracking.
+• Cloud Integration: Integrated Firebase for analytics and added Firebase Cloud Messaging for push notifications.`,
+      tags: ["Swift", "Hybrid/WKWebView", "Core Location", "Firebase"],
+      image: "/projects/Memolead 01.jpeg",
       images: [
-        "/projects/MRNSW iOS 01.jpeg", "/projects/MRNSW iOS 02.jpeg", "/projects/MRNSW iOS 03.jpeg", "/projects/MRNSW iOS 04.jpeg", "/projects/MRNSW iOS 05.jpeg", "/projects/MRNSW iOS 06.jpeg", "/projects/MRNSW iOS 07.jpeg", "/projects/MRNSW iOS 08.jpeg",
-        "/projects/MRNSW iPadOS 01.jpeg", "/projects/MRNSW iPadOS 02.jpeg", "/projects/MRNSW iPadOS 03.jpeg", "/projects/MRNSW iPadOS 04.jpeg", "/projects/MRNSW iPadOS 05.jpeg", "/projects/MRNSW iPadOS 06.jpeg", "/projects/MRNSW iPadOS 07.jpeg"
+        "/projects/Memolead 01.jpeg", "/projects/Memolead 02.jpeg", "/projects/Memolead 03.jpeg", "/projects/Memolead 04.jpeg"
       ],
-      mockupColor: "#E02B1D"
+      mockupColor: "#8E8E93"
     },
     {
       title: "Tokyo Yakult Swallows",
@@ -112,27 +133,6 @@ Technical Overview:
         "/projects/Edion 01.jpeg", "/projects/Edion 02.jpeg", "/projects/Edion 03.jpeg", "/projects/Edion 04.jpeg", "/projects/Edion 05.jpeg"
       ],
       mockupColor: "#005BAC"
-    },
-    {
-      title: "Memolead",
-      description: "A lifestyle service portal for managing memberships. Integrates facility search and QR code check-ins.",
-      longDescription: `Memolead is a Japanese hybrid iOS application designed for members of the Memolead Group, specializing in wedding ceremonies, funeral services, and mutual aid societies.
-
-Key Features:
-• Membership Management: Personal dashboard to view status, points, and contracts.
-• Location-Based Services: GPS-enabled search for facilities and affiliate stores.
-• QR Code Integration: Built-in scanner for check-ins and point collection.
-• Information Hub: Access to etiquette guides, news, and specialized service websites.
-
-Technical Structure:
-• Architecture: Hybrid (Swift + WKWebView) with native navigation and background tracking.
-• Cloud Integration: Integrated Firebase for analytics and added Firebase Cloud Messaging for push notifications.`,
-      tags: ["Swift", "Hybrid/WKWebView", "Core Location", "Firebase"],
-      image: "/projects/Memolead 01.jpeg",
-      images: [
-        "/projects/Memolead 01.jpeg", "/projects/Memolead 02.jpeg", "/projects/Memolead 03.jpeg", "/projects/Memolead 04.jpeg"
-      ],
-      mockupColor: "#8E8E93"
     }
   ];
 
@@ -266,13 +266,12 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
             <div className={styles.socials}>
               <a href="https://github.com/abrasaldomark" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/abrasaldomark/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="#">Twitter</a>
             </div>
           </div>
         </div>
         <div className={styles.resumeContainer}>
           <a 
-            href="/resume.pdf" 
+            href="/Mark%20Oraye%20Abrasaldo%20Resume.docx" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.resumeButton}
