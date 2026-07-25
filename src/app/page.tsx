@@ -306,5 +306,5 @@ const skills = [
   { category: "Programming Language", items: ["Swift", "Objective-C", "Kotlin", "Java", "Dart", "JavaScript", "TypeScript", "Python"] },
   { category: "Frameworks", items: ["SwiftUI", "UIKit", "Jetpack Compose", "React Native", "Flutter", "JavaFX", "MVC/MVVM", "Redux (ReSwift)", "RxSwift"] },
   { category: "Data & Networking", items: ["Core Data", "CloudKit", "REST APIs", "MapKit", "Google APIs (Maps, Firebase, Analytics, FCM)"] },
-  { category: "Tools & Testing", items: ["Git", "Unit Testing", "CI/CD", "GitHub Actions", "Xcode", "Android Studio"] }
+  { category: "Tools & Testing", items: ["Git", "Unit Testing", "CI/CD", "GitHub Actions", "Xcode", "Android Studio", "Visual Studio Code"] }
 ];
