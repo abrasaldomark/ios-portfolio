@@ -7,13 +7,13 @@ export default function Hero() {
       <div className={styles.content}>
         <h1 className={styles.title}>Mark Abrasaldo <br />Mobile App Developer</h1>
         <p className={styles.subtitle}>
-          Specializing in Swift, SwiftUI, UIKit, Kotlin, Java, Jetpack Compose, complex system architecture, and delivering polished experiences on the App Store and Google Play.
+          Specializing in Swift, SwiftUI, UIKit, Kotlin, Java, Jetpack Compose, React Native, Flutter and complex system architecture to build robust, scalable native and cross-platform solutions.
         </p>
         <div className={styles.cta}>
           <a href="#projects" className={styles.button}>View Projects</a>
-          <ObfuscatedEmail 
-            user="abrasaldomark" 
-            domain="gmail.com" 
+          <ObfuscatedEmail
+            user="abrasaldomark"
+            domain="gmail.com"
             className={styles.buttonSecondary}
           >
             Contact
