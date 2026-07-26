@@ -43,7 +43,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         setStatus('idle');
         alert('Something went wrong. Please try again or email me directly.');
       }
-    } catch (error) {
+    } catch {
       setStatus('idle');
       alert('Failed to send message. Please check your connection.');
     }

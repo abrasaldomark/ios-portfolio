@@ -1,6 +1,7 @@
 import styles from './ProjectCard.module.css';
 
 interface ProjectProps {
+  slug?: string;
   title: string;
   description: string;
   tags: string[];
@@ -9,7 +10,7 @@ interface ProjectProps {
   onViewDetails: () => void;
 }
 
-export default function ProjectCard({ title, description, tags, image, mockupColor = '#007AFF', onViewDetails }: ProjectProps) {
+export default function ProjectCard({ slug, title, description, tags, image, mockupColor = '#007AFF', onViewDetails }: ProjectProps) {
   return (
     <div className={styles.card}>
       <div className={styles.mockup} style={{ backgroundColor: mockupColor }}>
@@ -26,9 +27,16 @@ export default function ProjectCard({ title, description, tags, image, mockupCol
             <span key={tag} className={styles.tag}>{tag}</span>
           ))}
         </div>
-        <button onClick={onViewDetails} className={styles.link}>
+        <a 
+          href={slug ? `/projects/${slug}` : '#'} 
+          onClick={(e) => {
+            e.preventDefault();
+            onViewDetails();
+          }} 
+          className={styles.link}
+        >
           View Details
-        </button>
+        </a>
       </div>
     </div>
   );
