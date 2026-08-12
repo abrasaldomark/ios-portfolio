@@ -84,6 +84,47 @@
   padding: 3rem 2.5rem 0 2.5rem;
 }
 
+.tabsContainer {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 2.5rem 0 2.5rem;
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--system-gray-rgb));
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  margin-bottom: -1px;
+}
+
+.tabButton:hover {
+  color: rgb(var(--foreground-rgb));
+}
+
+.activeTab {
+  color: rgb(var(--foreground-rgb));
+  border-bottom-color: rgb(var(--system-blue-rgb));
+}
+
+@media (max-width: 480px) {
+  .tabsContainer {
+    padding: 1.5rem 2rem 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabsContainer {
+    padding: 2rem 5rem 0 5rem;
+  }
+}
+
 .gallery {
   display: flex;
   overflow-x: auto;

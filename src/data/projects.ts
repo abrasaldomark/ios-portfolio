@@ -6,6 +6,7 @@ export interface Project {
   tags: string[];
   image: string;
   images: string[];
+  imageTabs?: { name: string; images: string[] }[];
   mockupColor?: string;
   externalUrl?: string;
 }
@@ -177,6 +178,37 @@ In summary: It's a high-tech "Wisdom Engine" that leverages Firebase for content
       "/projects/stoiclife_1.png", "/projects/stoiclife_2.png", "/projects/stoiclife_3.png", "/projects/stoiclife_4.png", "/projects/stoiclife_5.png", "/projects/stoiclife_6.png", "/projects/stoiclife_7.png", "/projects/stoiclife_8.png", "/projects/stoiclife_9.png"
     ],
     mockupColor: "#E0F2FE"
+  },
+  {
+    slug: "patagilid",
+    title: "PataGilid (iOS & Android)",
+    description: "A native mountaineering companion app and personal climbing logbook for Filipino hikers, built separately for iOS and Android.",
+    longDescription: `PataGilid is a native mountaineering companion app designed for Filipino hikers to discover, plan, and journal their climbs across the Philippine archipelago. It serves as both a comprehensive mountain encyclopedia of over 2,688 officially recognized peaks and a personal climbing logbook — built with an offline-first philosophy so it works reliably deep in the wilderness. I developed this application natively for both iOS (SwiftUI) and Android (Jetpack Compose).
+
+Core Functionality:
+• Mountain Catalog & Discovery: Browse, search, and filter 2,688+ Philippine peaks across Luzon, Visayas, and Mindanao with elevation, difficulty rating, trail class, and GPS coordinates.
+• Climb Journaling: Record every ascent attempt with timestamps, duration, route types, trail names, and personal difficulty notes in a private cloud-synced logbook.
+• Interactive Map Viewer: A full-screen native Google Maps SDK satellite map featuring custom branded marker pins, interactive location picking, and deep-linking to mapping apps for routing.
+• Community Submissions & Admin Moderation: Users can submit unlisted local mountains to an admin review queue, while administrators have access to an in-app moderation queue to approve and merge peaks.
+• Photo Journaling & Drive Sync: Attach high-definition untouched climb photos to logs, which are securely uploaded directly to a visible "PataGilid Climb Memories" folder in the user's Google Drive.
+
+Technical Highlights (iOS):
+• Architecture & UI: Built entirely in SwiftUI using MVVM with shared state property wrappers and modern Swift Structured Concurrency (async/await).
+• Offline Data Strategy: Uses a cost-optimized Delta-Sync directly from Cloud Firestore into local SwiftData storage for instant cold-start availability.
+• Advanced Photo Caching: A custom dual-layer cache service stores downloaded Google Drive photos in high-speed RAM and persistent disk storage.
+
+Technical Highlights (Android):
+• Architecture & UI: Built strictly following Android’s recommended MVVM architecture utilizing Jetpack Compose. Relies heavily on Kotlin Coroutines and Kotlin Flow for state management.
+• Offline Data Strategy: Employs a robust Room Database for local persistence, seamlessly synchronizing with Firestore's Delta-Sync.
+• Media Handling: Uses Coil Compose for rendering images backed by a custom manual disk caching mechanism for Google Drive downloads.`,
+    tags: ["SwiftUI", "Jetpack Compose", "SwiftData", "Room Database", "Firebase", "Google Maps SDK", "Google Drive API"],
+    image: "/projects/patagilid_ios_1.png",
+    images: [],
+    imageTabs: [
+      { name: "iOS Edition", images: ["/projects/patagilid_ios_1.png", "/projects/patagilid_ios_2.png", "/projects/patagilid_ios_3.png", "/projects/patagilid_ios_4.png"] },
+      { name: "Android Edition", images: ["/projects/patagilid_android_1.png", "/projects/patagilid_android_2.png", "/projects/patagilid_android_3.png", "/projects/patagilid_android_4.png"] }
+    ],
+    mockupColor: "#F3F4F6"
   }
 ];
 

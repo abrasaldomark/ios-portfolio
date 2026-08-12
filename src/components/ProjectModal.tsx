@@ -12,6 +12,11 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveTabIndex(0);
+  }, [project]);
 
   useEffect(() => {
     if (isOpen) {
@@ -60,8 +65,22 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             )}
           </div>
 
+          {project.imageTabs && (
+            <div className={styles.tabsContainer}>
+              {project.imageTabs.map((tab, index) => (
+                <button 
+                  key={index} 
+                  className={`${styles.tabButton} ${activeTabIndex === index ? styles.activeTab : ''}`}
+                  onClick={() => setActiveTabIndex(index)}
+                >
+                  {tab.name}
+                </button>
+              ))}
+            </div>
+          )}
+
           <div className={styles.gallery}>
-            {project.images.map((img, index) => (
+            {(project.imageTabs ? project.imageTabs[activeTabIndex].images : project.images).map((img, index) => (
               <div 
                 key={index} 
                 className={styles.imageContainer}
