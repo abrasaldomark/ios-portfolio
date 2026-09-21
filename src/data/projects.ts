@@ -40,8 +40,8 @@ Built with a robust architecture using Redux (ReSwift) for state management and 
   {
     slug: "swiftly-workspace",
     title: "Swiftly Workspace",
-    description: "A comprehensive business management and ERP system for macOS and iOS. Handles sales, project management, and financials.",
-    longDescription: `Workspace is a multi-platform business management and ERP (Enterprise Resource Planning) system built with SwiftUI for macOS and iOS. It is designed to handle the end-to-end operations of a business, from initial sales and customer management to project execution, time tracking, and final invoicing.
+    description: "A comprehensive business management and CRM system for macOS and iOS. Handles sales, project management, and financials.",
+    longDescription: `Workspace is a multi-platform business management and CRM (Customer Relationship Management) system built with SwiftUI for macOS and iOS. It is designed to handle the end-to-end operations of a business, from initial sales and customer management to project execution, time tracking, and final invoicing.
 
 Core Functionality:
 • Sales & Customer Management: Handles customers, contacts, and the entire sales pipeline including quotes and contracts.
