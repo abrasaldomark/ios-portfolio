@@ -119,7 +119,7 @@ export default function Home({ initialSelectedSlug }: HomeProps = {}) {
         </div>
         <div className={styles.resumeContainer}>
           <a 
-            href="/Mark%20Oraye%20Abrasaldo%20Resume.docx" 
+            href="/Mark%20Oraye%20Abrasaldo%20Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.resumeButton}
